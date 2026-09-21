@@ -2,7 +2,7 @@
 
 Dự án phối cảnh nội thất 3D phòng khách chuẩn chỉ, trực quan thời gian thực được xây dựng bằng **Three.js** và **Vite**.
 
-![Haven & Home 3D Preview](https://raw.githubusercontent.com/NQQDao/webb_3D/main/preview.png) *(Tùy chọn)*
+![Haven & Home 3D Preview](https://raw.githubusercontent.com/NQQDao/WEB3D_project/main/preview.png) *(Tùy chọn)*
 
 ## ✨ Tính năng nổi bật
 
@@ -59,3 +59,4 @@ Thư mục xuất bản: `dist/`.
 - [Vite](https://vitejs.dev/) (Build tool thế hệ mới, HMR cực nhanh)
 - HTML5 Canvas Procedural Texturing (Tạo vân gỗ, vân đá, thảm dệt không phụ thuộc tài nguyên mạng)
 - CSS3 Glassmorphism & Responsive Layout
+
