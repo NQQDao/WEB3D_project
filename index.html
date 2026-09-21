@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Haven & Home - Không gian phòng khách 3D mẫu chuẩn chỉ với công nghệ Web3D thời gian thực. Tùy biến màu sắc, chất liệu và ánh sáng nội thất sống động."
+    />
+    <title>Haven & Home | Showroom Nội Thất 3D Cao Cấp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <!-- Glow Trang Trí Nền -->
+      <div class="bg-glow glow-one"></div>
+      <div class="bg-glow glow-two"></div>
+
+      <!-- Header Điều Hướng -->
+      <header class="topbar">
+        <a href="#" class="brand">
+          <span class="brand-mark">H</span>
+          <div class="brand-text">
+            <span class="brand-name">Haven & Home</span>
+            <span class="brand-sub">3D Interior Studio</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Menu chính">
+          <a href="#showroom-section" class="active">Phòng Mẫu 3D</a>
+          <a href="#collection-section">Bộ Sưu Tập</a>
+          <a href="#features-section">Vật Liệu & Công Nghệ</a>
+          <a href="#about-section">Về Chúng Tôi</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="nav-contact-btn">Đặt lịch tư vấn</button>
+          <div class="cart-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count">1</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Hero: Không Gian Nội Thất 3D Trực Quan -->
+      <main class="hero" id="showroom-section">
+        <!-- Cột Trái: Giới Thiệu & Thông Điệp Sản Phẩm -->
+        <section class="hero-copy">
+          <div class="badge-tag">
+            <span class="status-indicator"></span>
+            PHÒNG KHÁCH MẪU CHUẨN CHỈ • WEB3D REALTIME
+          </div>
+
+          <h1 class="hero-heading">
+            Kiến tạo không gian sống <em>chuẩn mực</em> & thanh lịch.
+          </h1>
+
+          <p class="lede">
+            Trải nghiệm phối cảnh nội thất tương tác thời gian thực. Tự do xoay 360°,
+            thay đổi chất liệu vải nỉ Bouclé hay da bò tự nhiên, và quan sát ánh sáng thực
+            tế từ bình minh rạng rỡ tới hoàng hôn ấm cúng.
+          </p>
+
+          <div class="usp-tags">
+            <span class="usp-item">✨ Chuẩn vật liệu PBR</span>
+            <span class="usp-item">🎯 Xoay 360° tự do</span>
+            <span class="usp-item">📐 Thước đo 3D tỷ lệ 1:1</span>
+            <span class="usp-item">💡 3 kịch bản ánh sáng</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="#collection-section" class="primary-btn">
+              Khám phá bộ sưu tập
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <button class="secondary-btn" id="btn-quick-tour" onclick="document.querySelector('[data-camera-preset=sofa]')?.click()">
+              🔍 Xem cận cảnh Sofa
+            </button>
+          </div>
+
+          <!-- Thông số uy tín -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong>1.200+</strong>
+              <span>Không gian bàn giao</span>
+            </div>
+            <div class="stat-card">
+              <strong>4.95 / 5</strong>
+              <span>Khách hàng hài lòng</span>
+            </div>
+            <div class="stat-card">
+              <strong>10 Năm</strong>
+              <span>Bảo hành khung kết cấu</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cột Phải: Khung Nhìn 3D Viewport Tương Tác Chuẩn Chỉ -->
+        <section class="viewport-wrapper" id="showroom-viewport">
+          <div class="viewport-header">
+            <div class="viewport-badge">
+              <span class="live-dot"></span>
+              <span>Living Room Suite 01</span>
+            </div>
+            <div class="viewport-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4M12 8h.01"></path>
+              </svg>
+              <span>Giữ chuột xoay • Lăn chuột phóng to • Click điểm ghim</span>
+            </div>
+          </div>
+
+          <!-- Three.js Canvas Container -->
+          <div id="canvas-container" class="canvas-box"></div>
+
+          <!-- Các điểm neo ghim Hotspot tương tác trên 3D -->
+          <div id="hotspots-overlay" class="hotspots-layer"></div>
+
+          <!-- Thanh Điều Khiển Nổi Glassmorphism (Floating Control Dock) -->
+          <div class="control-dock">
+            <!-- Nhóm 1: Góc nhìn Camera -->
+            <div class="dock-group">
+              <span class="dock-title">Góc nhìn</span>
+              <div class="btn-group">
+                <button class="dock-btn active" data-camera-preset="overview" title="Toàn cảnh phòng">
+                  <span class="dock-icon">🏠</span>
+                  <span class="dock-text">Toàn cảnh</span>
+                </button>
+                <button class="dock-btn" data-camera-preset="sofa" title="Cận cảnh sofa Luna">
+                  <span class="dock-icon">🛋️</span>
+                  <span class="dock-text">Sofa</span>
+                </button>
+                <button class="dock-btn" data-camera-preset="lounge" title="Góc thư giãn & Bàn trà">
+                  <span class="dock-icon">🪑</span>
+                  <span class="dock-text">Thư giãn</span>
+                </button>
+                <button class="dock-btn" data-camera-preset="topdown" title="Góc nhìn mặt bằng kiến trúc">
+                  <span class="dock-icon">📐</span>
+                  <span class="dock-text">Mặt bằng</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phân cách -->
+            <div class="dock-divider"></div>
+
+            <!-- Nhóm 2: Tùy biến Màu sắc & Vật liệu Sofa -->
+            <div class="dock-group">
+              <div class="dock-title-row">
+                <span class="dock-title">Chất liệu Sofa</span>
+                <span class="finish-highlight" id="current-finish-name">Kem Bouclé (Ivory)</span>
+              </div>
+              <div class="swatch-group">
+                <button
+                  class="swatch-btn active"
+                  data-finish="cream"
+                  title="Kem Bouclé - Nỉ xù êm ái"
+                  style="--swatch-color: #f3ece0"
+                ></button>
+                <button
+                  class="swatch-btn"
+                  data-finish="cognac"
+                  title="Da Bò Cognac - Da Full-grain cổ điển"
+                  style="--swatch-color: #9e522c"
+                ></button>
+                <button
+                  class="swatch-btn"
+                  data-finish="sage"
+                  title="Xanh Rêu Velvet - Nhung tuyết sang trọng"
+                  style="--swatch-color: #485844"
+                ></button>
+                <button
+                  class="swatch-btn"
+                  data-finish="charcoal"
+                  title="Xám Khói Slate - Vải dệt hiện đại"
+                  style="--swatch-color: #2b2e34"
+                ></button>
+              </div>
+            </div>
+
+            <!-- Phân cách -->
+            <div class="dock-divider"></div>
+
+            <!-- Nhóm 3: Ánh sáng không gian -->
+            <div class="dock-group">
+              <span class="dock-title">Ánh sáng</span>
+              <div class="btn-group">
+                <button class="dock-btn active" data-lighting="day" title="Ánh sáng tự nhiên ban ngày">
+                  <span class="dock-icon">☀️</span>
+                  <span class="dock-text">Ngày</span>
+                </button>
+                <button class="dock-btn" data-lighting="sunset" title="Ánh hoàng hôn ấm áp">
+                  <span class="dock-icon">🌅</span>
+                  <span class="dock-text">Hoàng hôn</span>
+                </button>
+                <button class="dock-btn" data-lighting="night" title="Ánh đèn ấm cúng ban đêm">
+                  <span class="dock-icon">🌙</span>
+                  <span class="dock-text">Đêm</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phân cách -->
+            <div class="dock-divider"></div>
+
+            <!-- Nhóm 4: Công cụ tiện ích -->
+            <div class="dock-group">
+              <span class="dock-title">Tiện ích</span>
+              <div class="icon-tools">
+                <button class="tool-btn" id="btn-toggle-dimensions" title="Bật/Tắt thước đo 3D kích thước thực">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 3H3v18h18V3zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"></path>
+                  </svg>
+                  <span>Thước đo</span>
+                </button>
+                <button class="tool-btn" id="btn-toggle-autorotate" title="Tự động xoay 360° vòng quanh">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                  </svg>
+                  <span>Tự xoay</span>
+                </button>
+                <button class="tool-btn" id="btn-toggle-lamp" title="Bật/Tắt bóng đèn cây Halo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4.5 3 6h8c1.5-1.5 3-3.5 3-6a7 7 0 0 0-7-7z"></path>
+                  </svg>
+                  <span>Đèn cây</span>
+                </button>
+                <button class="tool-btn" id="btn-toggle-fullscreen" title="Toàn màn hình không gian 3D">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                  </svg>
+                  <span>Phóng to</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drawer Modal Xem Nhanh Thông Số Sản Phẩm Khi Click Hotspot -->
+          <div class="product-modal" id="product-modal">
+            <div class="modal-card">
+              <button class="modal-close" id="modal-close-btn" aria-label="Đóng bảng chi tiết">&times;</button>
+              <div class="modal-header">
+                <span class="modal-category">Sofa 3 Chỗ Cao Cấp</span>
+                <h3 class="modal-title">Sofa Luna Curve Lounge</h3>
+                <div class="modal-price-row">
+                  <span class="modal-price">$1,499</span>
+                  <span class="modal-stock">● Sẵn hàng giao trong 48h</span>
+                </div>
+              </div>
+              <p class="modal-desc">
+                Đệm mút đàn hồi đa tầng bọc vải Bouclé Bỉ êm ái, khung gỗ tự nhiên chống mối mọt kết hợp chân đồng thau tinh tế.
+              </p>
+              <div class="modal-specs-list">
+                <!-- Sẽ được điền tự động qua JavaScript -->
+              </div>
+              <div class="modal-actions">
+                <button class="modal-buy-btn">Thêm vào giỏ hàng</button>
+                <button class="modal-ar-btn" onclick="alert('Tính năng AR Preview trên camera điện thoại đang được chuẩn bị!')">
+                  📱 Xem AR trong phòng
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Danh Mục Sản Phẩm Tương Tác Đồng Bộ Cảnh 3D -->
+      <section class="catalog-section" id="collection-section">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">BỘ SƯU TẬP PHÒNG KHÁCH</span>
+            <h2 class="section-title">Chọn đồ nội thất để tương tác trực tiếp</h2>
+          </div>
+          <p class="section-desc">
+            Bấm vào bất kỳ món đồ nào bên dưới, góc máy 3D sẽ tự động di chuyển đến tâm điểm sản phẩm tương ứng trong phòng mẫu.
+          </p>
+        </div>
+
+        <div class="catalog-grid">
+          <!-- Card 1: Sofa -->
+          <div class="catalog-card" data-catalog-target="hotspot-sofa">
+            <div class="card-tag">Bestseller</div>
+            <div class="catalog-thumb sofa-thumb">
+              <div class="thumb-badge">3D Focus</div>
+            </div>
+            <div class="catalog-info">
+              <div class="cat-type">Sofa 3 Chỗ</div>
+              <h3 class="cat-name">Luna Curve Lounge</h3>
+              <p class="cat-summary">Vải Bouclé cao cấp nhập khẩu, bo cong tinh tế.</p>
+              <div class="cat-footer">
+                <span class="cat-price">$1,499</span>
+                <span class="cat-link">Xem 3D &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Bàn Trà -->
+          <div class="catalog-card" data-catalog-target="hotspot-table">
+            <div class="card-tag">Điêu Khắc</div>
+            <div class="catalog-thumb table-thumb">
+              <div class="thumb-badge">3D Focus</div>
+            </div>
+            <div class="catalog-info">
+              <div class="cat-type">Bàn Trà</div>
+              <h3 class="cat-name">Arlo Fluted Table</h3>
+              <p class="cat-summary">Mặt đá Calacatta tự nhiên, chân gân sọc gỗ sồi.</p>
+              <div class="cat-footer">
+                <span class="cat-price">$480</span>
+                <span class="cat-link">Xem 3D &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Đèn Cây -->
+          <div class="catalog-card" data-catalog-target="hotspot-lamp">
+            <div class="card-tag">Đồng Thau</div>
+            <div class="catalog-thumb lamp-thumb">
+              <div class="thumb-badge">3D Focus</div>
+            </div>
+            <div class="catalog-info">
+              <div class="cat-type">Đèn Sàn</div>
+              <h3 class="cat-name">Halo Arc Brass</h3>
+              <p class="cat-summary">Cần vòm uốn nghệ thuật, ánh sáng vàng ấm 2700K.</p>
+              <div class="cat-footer">
+                <span class="cat-price">$320</span>
+                <span class="cat-link">Xem 3D &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Ghế Đơn -->
+          <div class="catalog-card" data-catalog-target="hotspot-chair">
+            <div class="card-tag">Nordic</div>
+            <div class="catalog-thumb chair-thumb">
+              <div class="thumb-badge">3D Focus</div>
+            </div>
+            <div class="catalog-info">
+              <div class="cat-type">Ghế Tựa Đơn</div>
+              <h3 class="cat-name">Terra Nordic Chair</h3>
+              <p class="cat-summary">Công thái học ôm lưng, đệm nỉ cao cấp êm dịu.</p>
+              <div class="cat-footer">
+                <span class="cat-price">$590</span>
+                <span class="cat-link">Xem 3D &rarr;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Khối Giới Thiệu Công Nghệ & Tiêu Chuẩn Sản Phẩm -->
+      <section class="features-section" id="features-section">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feat-icon">💎</div>
+            <h4>Vật Liệu PBR Thực Tế</h4>
+            <p>Tái hiện chính xác độ nhám (roughness), độ phản xạ ánh kim và vân thớ gỗ như nhìn tận mắt tại xưởng.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">📐</div>
+            <h4>Tỷ Lệ Kiến Trúc Chuẩn</h4>
+            <p>Mọi món đồ được dựng theo tỷ lệ kích thước thực tế (cm), giúp bạn an tâm khi bài trí vào không gian nhà bạn.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">🌿</div>
+            <h4>Sản Xuất Bền Vững</h4>
+            <p>100% gỗ rừng trồng có chứng chỉ FSC, vải dệt thân thiện không hóa chất độc hại, bảo vệ sức khỏe gia đình.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feat-icon">⚡</div>
+            <h4>Tải Nhanh 60 FPS</h4>
+            <p>Tối ưu hóa hình học Procedural siêu nhẹ, tương thích mượt mà trên cả máy tính lẫn điện thoại thông minh.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" id="about-section">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand">
+              <span class="brand-mark">H</span>
+              <span class="brand-name">Haven & Home</span>
+            </div>
+            <p class="footer-tagline">
+              Nâng tầm phong cách sống với nội thất thiết kế đương đại và trải nghiệm số hóa 3D tiên phong.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="link-col">
+              <h5>Bộ Sưu Tập</h5>
+              <a href="#">Phòng khách</a>
+              <a href="#">Phòng ngủ</a>
+              <a href="#">Phòng ăn</a>
+              <a href="#">Đèn & Decor</a>
+            </div>
+            <div class="link-col">
+              <h5>Dịch Vụ</h5>
+              <a href="#">Tư vấn thiết kế 3D</a>
+              <a href="#">Tùy chỉnh chất liệu</a>
+              <a href="#">Giao hàng & Lắp đặt</a>
+              <a href="#">Bảo hành 10 năm</a>
+            </div>
+            <div class="link-col">
+              <h5>Liên Hệ</h5>
+              <span>Hotline: 1900 8888</span>
+              <span>Email: studio@havenhome.vn</span>
+              <span>Showroom: 88 Đồng Khởi, Q.1, TP.HCM</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Haven & Home Design Studio. All rights reserved. Web3D Engine powered by Three.js.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Script chính -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
