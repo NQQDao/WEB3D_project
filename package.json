@@ -6,12 +6,23 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "server": "node server/index.js",
+    "db:migrate": "node server/migrate.js"
   },
   "dependencies": {
-    "three": "^0.166.1"
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "lucide-react": "^1.52.0",
+    "pg": "^8.23.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.166.1",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "vite": "^5.4.10"
   }
 }

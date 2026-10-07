@@ -1,62 +1,71 @@
-# Haven & Home — 3D Interior Showroom (Web3D)
+# Haven & Home — Showroom Nội Thất 3D (Web3D)
 
-Dự án phối cảnh nội thất 3D phòng khách chuẩn chỉ, trực quan thời gian thực được xây dựng bằng **Three.js** và **Vite**.
+Website showroom nội thất phòng khách 3D thời gian thực, có giỏ hàng, đặt hàng và trang quản trị. Frontend dùng **React + Three.js + Vite**, backend dùng **Node.js (Express) + PostgreSQL**.
 
-![Haven & Home 3D Preview](https://raw.githubusercontent.com/NQQDao/WEB3D_project/main/preview.png) *(Tùy chọn)*
+## ✨ Tính năng
 
-## ✨ Tính năng nổi bật
+**Showroom 3D**
+- Phòng khách 3D: sofa *Luna Curve Lounge*, bàn trà *Arlo Fluted Table*, ghế *Terra Nordic Armchair*, đèn cây *Halo Brass Arc Lamp*, cây xanh, thảm và sàn gỗ PBR.
+- 3 kịch bản ánh sáng: ban ngày, hoàng hôn, ban đêm.
+- Đổi chất liệu sofa: Bouclé kem, da Cognac, nhung xanh rêu, xám Slate.
+- 4 góc camera có sẵn, xoay 360°, zoom, tự xoay, toàn màn hình, thước đo kích thước 3D.
+- Điểm ghim (hotspot) để xem thông tin sản phẩm. Vân gỗ, vân đá và thảm được vẽ bằng canvas nên không cần tải ảnh.
 
-- **Không gian phòng khách 3D cao cấp:**
-  - Sofa cong 3 chỗ *Luna Curve Lounge* (bo góc mềm mại, đệm công thái học, chân đồng thau).
-  - Bàn trà điêu khắc *Arlo Fluted Table* (mặt đá Calacatta cẩm thạch, thân gỗ sồi gân sọc, decor hoa khô và nến).
-  - Ghế tựa thư giãn *Terra Nordic Armchair*.
-  - Đèn cây vòm *Halo Brass Arc Lamp* phát sáng thực tế (`PointLight`).
-  - Cây xanh nội thất *Fiddle-leaf Fig* & Thảm len dệt xương cá.
-  - Sàn gỗ tự nhiên phản xạ PBR mềm mại.
-- **Hệ thống ánh sáng 3 kịch bản thời gian thực:**
-  - ☀️ Ban ngày (Natural Daylight & Soft Shadows).
-  - 🌅 Hoàng hôn (Golden Hour ấm áp).
-  - 🌙 Ban đêm thư giãn (Warm Night & đèn cây rực rỡ).
-- **Bộ tùy biến chất liệu PBR Sofa:**
-  - Kem Bouclé (Ivory), Da Bò Cognac (Leather), Xanh Rêu Velvet (Olive), Xám Khói Slate (Charcoal).
-- **Điều khiển góc quay thông minh:**
-  - 4 Camera Presets: Toàn cảnh, Cận cảnh sofa, Góc thư giãn, Mặt bằng kiến trúc.
-  - Xoay 360°, zoom, pan tự do chống lật sàn với OrbitControls.
-- **Điểm ghim Hotspots 3D tương tác:**
-  - Ghim phát sóng radar nhấp nháy, bấm để xem chi tiết thông số kỹ thuật (giá, kích thước, vật liệu).
-- **Tiện ích bổ trợ:**
-  - Thước đo kích thước 3D thực tế (220cm x 95cm x 82cm).
-  - Tự xoay 360° (Auto-rotate Turntable).
-  - Toàn màn hình (Fullscreen Viewer).
-  - Tối ưu hóa 60 FPS, hỗ trợ cảm ứng di động (`touch-action: none`).
+**Mua sắm và tài khoản**
+- Đăng ký / đăng nhập, lưu cấu hình phòng 3D.
+- Giỏ hàng, mã giảm giá (voucher), đặt hàng.
 
----
+**Trang quản trị**
+- Tổng quan thống kê, quản lý đơn hàng, sản phẩm, voucher và khách hàng.
 
-## 🚀 Cài đặt & Khởi chạy
+**Chế độ offline:** khi backend hoặc PostgreSQL không chạy, website tự lưu dữ liệu vào trình duyệt (localStorage) và vẫn dùng được.
 
-### 1. Cài đặt thư viện:
+## 🚀 Cài đặt và chạy
+
+Yêu cầu: Node.js 20 trở lên. PostgreSQL là tuỳ chọn (không có thì chạy ở chế độ offline).
+
 ```bash
+# 1. Cài thư viện
 npm install
-```
 
-### 2. Chạy môi trường phát triển (Dev Server):
-```bash
+# 2. Tạo file cấu hình rồi sửa DATABASE_URL cho đúng máy của bạn
+cp .env.example .env
+
+# 3. (Tuỳ chọn) Tạo bảng và dữ liệu mẫu trong PostgreSQL
+npm run db:migrate
+
+# 4. Chạy backend (cổng 5000) và frontend (cổng 5173) ở hai terminal riêng
+npm run server
 npm run dev
 ```
-Truy cập `http://localhost:5173` trên trình duyệt.
 
-### 3. Đóng gói cho Production:
+Mở `http://localhost:5173`. Frontend tự chuyển các request `/api` sang backend ở cổng 5000.
+
+Lưu ý: `npm run db:migrate` vẫn báo thoát thành công kể cả khi SQL lỗi, hãy đọc kỹ thông báo in ra.
+
+### Đóng gói production
+
 ```bash
-npm run build
+npm run build     # xuất ra thư mục dist/
+npm run preview   # xem thử bản build
 ```
-Thư mục xuất bản: `dist/`.
 
----
+## 📁 Cấu trúc
 
-## 🛠️ Công nghệ sử dụng
+| Thư mục | Nội dung |
+| --- | --- |
+| `src/engine/threeEngine.js` | Cảnh 3D (Three.js) |
+| `src/components/` | Giao diện React: `showroom`, `cart`, `auth`, `admin`, `layout`, `common` |
+| `src/stores/` | State (Zustand) và dữ liệu sản phẩm |
+| `src/api.js` | Gọi API, tự chuyển sang offline khi mất kết nối |
+| `server/` | API Express, kết nối PostgreSQL, `schema.sql` và script migrate |
+| `openspec/` | Kế hoạch thay đổi theo quy trình OpenSpec |
 
-- [Three.js](https://threejs.org/) (WebGL 3D Engine, PBR Materials, OrbitControls, RoundedBoxGeometry)
-- [Vite](https://vitejs.dev/) (Build tool thế hệ mới, HMR cực nhanh)
-- HTML5 Canvas Procedural Texturing (Tạo vân gỗ, vân đá, thảm dệt không phụ thuộc tài nguyên mạng)
-- CSS3 Glassmorphism & Responsive Layout
+## ⚠️ Chưa sẵn sàng cho production
 
+- Đăng nhập chưa kiểm tra mật khẩu và chưa dùng token; API `/api/admin` chưa được bảo vệ.
+- Chưa có test và linter.
+
+## 🛠️ Công nghệ
+
+React 19, Three.js, Zustand, Vite, Express 5, PostgreSQL (`pg`).
